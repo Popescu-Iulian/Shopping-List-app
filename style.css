@@ -1,0 +1,106 @@
+/* === GENERAL === */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
+/* === HEADER === */
+.header {
+	background-color: lightseagreen;
+	padding: 2rem 10rem;
+	color: white;
+	text-align: center;
+}
+
+.header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.header h1 {
+	margin: 2rem;
+	font-family: 'Bitter', serif;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+.header input {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 75%;
+	padding: 0.7rem;
+	float: left;
+	font-size: 1rem;
+}
+
+.header .addBtn {
+	padding: 0.64rem;
+	width: 25%;
+	background: lightgray;
+	color: darkblue;
+	float: left;
+	text-align: center;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.header .addBtn:hover {
+	background-color: darkgray;
+}
+
+/* === LIST === */
+ul li {
+	cursor: pointer;
+	position: relative;
+	padding: 0.9rem 0.5rem 0.9rem 3.3rem;
+	background: lightgray;
+	font-size: 1.1rem;
+	transition: 0.2s;
+	user-select: none;
+}
+
+ul li:nth-child(odd) {
+	background: whitesmoke;
+}
+
+ul li:hover {
+	background: darkgray;
+}
+
+ul li.checked {
+	background: lightslategrey;
+	color: whitesmoke;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: darkgreen;
+	border-style: solid;
+	border-width: 0 4px 4px 0;
+	top: 0.9rem;
+	left: 1.5rem;
+	transform: rotate(45deg);
+	height: 1.1rem;
+	width: 0.4rem;
+}
+
+/* .close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.8rem 1rem;
+}
+
+.close:hover {
+	background-color: lightcoral;
+	color: white;
+} */
