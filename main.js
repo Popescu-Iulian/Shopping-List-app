@@ -1,19 +1,21 @@
 const ITEMS_LIST = document.querySelector('#items-list');
 const ITEMS_INPUT = document.querySelector('#items-input');
 
-const LIST = [
-	{
-		item: 'ion'
-	}
-];
+const LIST = [];
 
 function draw() {
 	let liItem = '';
 
 	for (let i = 0; i < LIST.length; i++) {
-		liItem += `
-      <li onclick="checkedItem(${i})" class="ceva">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+		if (LIST[i].checked) {
+			liItem += `
+        <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
     `;
+		} else {
+			liItem += `
+        <li onclick="checkedItem(${i})">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+    `;
+		}
 	}
 
 	ITEMS_LIST.innerHTML = liItem;
@@ -46,5 +48,7 @@ function delItem(idx) {
 }
 
 function checkedItem(idx) {
-	ITEMS_LIST.children[idx].classList.toggle('checked');
+	LIST[idx].checked = true;
+
+	draw();
 }
