@@ -7,14 +7,14 @@ function draw() {
 	let liItem = '';
 
 	for (let i = 0; i < LIST.length; i++) {
-		if (LIST[i].checked) {
+		if (LIST[i].checked === true) {
 			liItem += `
-        <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
-    `;
+	      <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+	  `;
 		} else {
 			liItem += `
-        <li onclick="checkedItem(${i})">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
-    `;
+	      <li onclick="checkedItem(${i})">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+	  `;
 		}
 	}
 
@@ -51,4 +51,8 @@ function checkedItem(idx) {
 	LIST[idx].checked = true;
 
 	draw();
+}
+
+function ceva() {
+	console.log('aha');
 }
