@@ -12,23 +12,23 @@
 		<script src="main.js" defer></script>
 		<title>Shopping List app</title>
 	</head>
-	<body>
-		<div id="div-head" class="header">
+	<body onload="draw()">
+		<div class="header">
 			<h1>My Shopping List</h1>
 			<input
 				type="text"
 				id="items-input"
 				placeholder="What do you need to buy ..."
 			/>
-			<button onclick="newElement()" class="addBtn">Add</button>
+			<button onclick="addItem(event)" class="addBtn">Add</button>
 		</div>
 
 		<ul id="items-list">
-			<li>Potatoes: 1 kg</li>
-			<li class="checked">Romanian garlic (NO chinese)</li>
-			<li>Bananas: 2 kg</li>
-			<li>Eggs: 10</li>
-			<li class="checked">Butter 82% fat (promotion)</li>
+			<!-- <li>Potatoes: 1 kg<span class="delete" onclick="delItem(idx)">X</span></li>
+			<li>Bananas: 2 kg<span class="delete" onclick="delItem(idx)">X</span></li>
+			<li class="checked">
+				Butter 82% fat<span class="delete" onclick="delItem(idx)">X</span>
+			</li> -->
 		</ul>
 	</body>
 </html>
