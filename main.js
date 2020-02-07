@@ -12,7 +12,7 @@ function draw() {
 
 	for (let i = 0; i < LIST.length; i++) {
 		liItem += `
-      <li>${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+      <li onclick="checkedItem(${i})" class="ceva">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
     `;
 	}
 
@@ -43,4 +43,8 @@ function delItem(idx) {
 
 		draw();
 	}
+}
+
+function checkedItem(idx) {
+	ITEMS_LIST.children[idx].classList.toggle('checked');
 }
