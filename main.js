@@ -7,7 +7,7 @@ function draw() {
 	let liItem = '';
 
 	for (let i = 0; i < LIST.length; i++) {
-		if (LIST[i].checked === true) {
+		if (LIST[i].checked) {
 			liItem += `
 	      <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(event, ${i})">X</span></li>
 	  `;
