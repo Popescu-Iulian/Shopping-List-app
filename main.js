@@ -9,11 +9,11 @@ function draw() {
 	for (let i = 0; i < LIST.length; i++) {
 		if (LIST[i].checked === true) {
 			liItem += `
-	      <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+	      <li onclick="checkedItem(${i})" class="checked">${LIST[i].item}<span class="delete" onclick="delItem(event, ${i})">X</span></li>
 	  `;
 		} else {
 			liItem += `
-	      <li onclick="checkedItem(${i})">${LIST[i].item}<span class="delete" onclick="delItem(${i})">X</span></li>
+	      <li onclick="checkedItem(${i})">${LIST[i].item}<span class="delete" onclick="delItem(event, ${i})">X</span></li>
 	  `;
 		}
 	}
@@ -39,7 +39,9 @@ function addItem(event) {
 	draw();
 }
 
-function delItem(idx) {
+function delItem(event, idx) {
+	event.stopPropagation();
+
 	if (confirm(`You don't want to buy ${LIST[idx].item}?`)) {
 		LIST.splice(idx, 1);
 
@@ -51,8 +53,4 @@ function checkedItem(idx) {
 	LIST[idx].checked = true;
 
 	draw();
-}
-
-function ceva() {
-	console.log('aha');
 }
