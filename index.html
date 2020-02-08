@@ -13,16 +13,18 @@
 		<title>Shopping List app</title>
 	</head>
 	<body onload="draw()">
-		<div class="header">
-			<h1>My Shopping List</h1>
-			<input
-				type="text"
-				id="items-input"
-				placeholder="What do you need to buy ..."
-			/>
-			<button onclick="addItem(event)" class="addBtn">Add</button>
-		</div>
+		<div id="container">
+			<div class="header">
+				<h1>My Shopping List</h1>
+				<input
+					type="text"
+					id="items-input"
+					placeholder="What do you need to buy ..."
+				/>
+				<button onclick="addItem(event)" class="addBtn">Add</button>
+			</div>
 
-		<ul id="items-list"></ul>
+			<ul id="items-list"></ul>
+		</div>
 	</body>
 </html>
