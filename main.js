@@ -1,5 +1,5 @@
-const ITEMS_LIST = document.querySelector('#items-list');
-const ITEMS_INPUT = document.querySelector('#items-input');
+const ITEMS_LIST = document.querySelector('.items-list');
+const ITEMS_INPUT = document.querySelector('.items-input');
 
 const LIST = [];
 

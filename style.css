@@ -6,46 +6,39 @@
 }
 
 body {
-	font-family: 'Nunito', sans-serif;
-	align-items: center;
-	justify-content: center;
-	display: flex;
 	height: 100vh;
+	display: flex;
+	align-items: center;
 	background: url('images/shopping.png') no-repeat center center fixed;
 	background-size: cover;
+	font-family: 'Nunito', sans-serif;
 }
 
 #container {
-	width: 75%;
-	max-width: 100rem;
-	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	max-height: 77%;
+	max-width: 75%;
+	margin: 1rem auto;
 	border-radius: 10px;
-	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
-	box-sizing: border-box;
 	overflow: hidden;
-	border: 1px solid lightgray;
 }
 
 /* === HEADER === */
 .header {
-	margin: 0 auto;
-	background-color: lightseagreen;
-	padding: 2rem 2rem;
-	color: white;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-}
-
-.header:after {
-	content: '';
-	display: table;
-	clear: both;
+	padding: 1rem 2rem;
+	background-color: lightseagreen;
+	color: white;
 }
 
 .header h1 {
-	margin-bottom: 30px;
+	margin-bottom: 1rem;
 	font-family: 'Bitter', serif;
+	font-size: 1.5rem;
 	letter-spacing: 3px;
 	word-spacing: 5px;
 }
@@ -53,20 +46,16 @@ body {
 .header input {
 	border: none;
 	border-radius: 0;
-	/* de pus la tablet: width: 75%; */
-	padding: 0.7rem;
-	float: left;
+	padding: 0.5rem;
 	font-size: 1rem;
 }
 
 .header .addBtn {
+	text-align: center;
 	border: none;
-	padding: 0.64rem;
-	/* de pus la tablet: width: 25%; */
+	padding: 0.5rem;
 	background: lightsteelblue;
 	color: darkblue;
-	float: left;
-	text-align: center;
 	font-size: 1rem;
 	cursor: pointer;
 }
@@ -76,12 +65,16 @@ body {
 }
 
 /* === LIST === */
+.list {
+	overflow: auto;
+}
+
 ul li {
 	cursor: pointer;
 	position: relative;
-	padding: 0.9rem 0.5rem 0.9rem 3.3rem;
+	padding: 0.5rem 0.5rem 0.5rem 2.5rem;
 	background: lightgray;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	transition: 0.2s;
 	user-select: none;
 }
@@ -97,34 +90,32 @@ ul li:hover {
 ul li.checked {
 	background: lightslategrey;
 	color: whitesmoke;
-	text-decoration: line-through darkgreen double;
+	text-decoration: line-through darkgreen;
 }
 
 ul li.checked::before {
 	content: '';
 	position: absolute;
+	top: 0.5rem;
+	left: 1.1rem;
+	transform: rotate(45deg);
+	height: 1rem;
+	width: 0.4rem;
 	border-color: darkgreen;
 	border-style: solid;
-	border-width: 0 4px 4px 0;
-	top: 0.9rem;
-	left: 1.5rem;
-	transform: rotate(45deg);
-	height: 1.1rem;
-	width: 0.4rem;
+	border-width: 0 3px 3px 0;
 }
 
-/* === MEDIA QUERIES === */
-
-/* === FUNC CLASSES === */
+/* === FUNCTION CLASSES === */
 .delete {
 	color: darkred;
 	text-align: center;
-	width: 4rem;
+	width: 3rem;
 	position: absolute;
 	right: 0;
 	top: 0;
-	padding: 0.7rem 1rem;
-	font-size: 1.5rem;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
 }
 
 .delete:hover {
@@ -135,3 +126,5 @@ ul li.checked::before {
 .hidden {
 	display: none;
 }
+
+/* === MEDIA QUERIES === */
