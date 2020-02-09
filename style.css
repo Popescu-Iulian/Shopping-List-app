@@ -14,11 +14,15 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 
-#container {
+#container,
+.header {
 	display: flex;
 	flex-direction: column;
+}
+
+#container {
 	max-height: 77%;
-	max-width: 75%;
+	width: 70%;
 	margin: 1rem auto;
 	border-radius: 10px;
 	overflow: hidden;
@@ -27,8 +31,6 @@ body {
 /* === HEADER === */
 .header {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
 	text-align: center;
 	padding: 1rem 2rem;
 	background-color: lightseagreen;
@@ -38,25 +40,27 @@ body {
 .header h1 {
 	margin-bottom: 1rem;
 	font-family: 'Bitter', serif;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	letter-spacing: 3px;
 	word-spacing: 5px;
 }
 
-.header input {
+.header input,
+.header .addBtn {
 	border: none;
+	font-size: 0.8rem;
+}
+
+.header input {
 	border-radius: 0;
 	padding: 0.5rem;
-	font-size: 1rem;
 }
 
 .header .addBtn {
 	text-align: center;
-	border: none;
 	padding: 0.5rem;
 	background: lightsteelblue;
 	color: darkblue;
-	font-size: 1rem;
 	cursor: pointer;
 }
 
@@ -106,7 +110,6 @@ ul li.checked::before {
 	border-width: 0 3px 3px 0;
 }
 
-/* === FUNCTION CLASSES === */
 .delete {
 	color: darkred;
 	text-align: center;
@@ -128,3 +131,88 @@ ul li.checked::before {
 }
 
 /* === MEDIA QUERIES === */
+@media (min-width: 768px) {
+	#container {
+		max-height: 74%;
+	}
+
+	.header {
+		display: inline;
+		padding: 1.5rem 4rem;
+	}
+
+	.header:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.header h1 {
+		font-size: 2.5rem;
+	}
+
+	.header input,
+	.header .addBtn {
+		float: left;
+		font-size: 1rem;
+	}
+
+	.header input {
+		width: 75%;
+	}
+
+	.header .addBtn {
+		width: 25%;
+	}
+
+	ul li {
+		padding: 0.7rem 0.5rem 0.7rem 2.7rem;
+		font-size: 1.3rem;
+	}
+
+	ul li.checked::before {
+		top: 0.7rem;
+		left: 1.1rem;
+		height: 1.3rem;
+		width: 0.5rem;
+		border-width: 0 4px 4px 0;
+	}
+
+	.delete {
+		width: 4rem;
+		padding: 0.7rem 1rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	#container {
+		max-width: 67%;
+	}
+
+	.header h1 {
+		font-size: 3.7rem;
+	}
+
+	.header input,
+	.header .addBtn {
+		font-size: 1.3rem;
+	}
+
+	ul li {
+		padding: 0.9rem 0.9rem 0.9rem 3.7rem;
+		font-size: 1.5rem;
+	}
+
+	ul li.checked::before {
+		left: 1.4rem;
+		height: 1.8rem;
+		width: 0.6rem;
+		border-width: 0 5px 5px 0;
+	}
+
+	.delete {
+		width: 5rem;
+		font-size: 1.8rem;
+	}
+}
