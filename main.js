@@ -29,7 +29,7 @@ function addItem(event) {
 	};
 
 	if (ITEMS_INPUT.value === '') {
-		alert(`Please enter an item to buy!`);
+		alert(`Please enter the item you want to buy!`);
 	} else {
 		LIST.push(NEW_ITEM);
 	}
@@ -42,7 +42,7 @@ function addItem(event) {
 function delItem(event, idx) {
 	event.stopPropagation();
 
-	if (confirm(`You don't want to buy ${LIST[idx].item}?`)) {
+	if (confirm(`Don't want to buy ${LIST[idx].item} anymore?`)) {
 		LIST.splice(idx, 1);
 
 		draw();
