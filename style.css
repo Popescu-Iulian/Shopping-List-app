@@ -46,7 +46,7 @@ body {
 }
 
 .header input,
-.header .addBtn {
+.header .add-btn {
 	border: none;
 	font-size: 0.8rem;
 	outline: none;
@@ -57,16 +57,41 @@ body {
 	padding: 0.5rem;
 }
 
-.header .addBtn {
+.header .add-btn {
 	text-align: center;
 	padding: 0.5rem;
-	background: lightsteelblue;
+	background-color: lightsteelblue;
 	color: darkblue;
 	cursor: pointer;
 }
 
-.header .addBtn:hover {
+.header .add-btn:hover {
 	background-color: lightgreen;
+}
+
+/* === SORTING BTNS === */
+.sorting-btns {
+	background-color: bisque;
+	text-align: center;
+}
+
+.sort-btn {
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 0.1rem 0.5rem;
+	background-color: lightsteelblue;
+	color: darkblue;
+	cursor: pointer;
+	margin: 0.3rem;
+}
+
+.sort-btn:hover {
+	background-color: lightgreen;
+}
+
+.sort-btn:last-child {
+	margin-left: 2rem;
 }
 
 /* === LIST === */
@@ -153,7 +178,7 @@ ul li.checked::before {
 	}
 
 	.header input,
-	.header .addBtn {
+	.header .add-btn {
 		float: left;
 		font-size: 1rem;
 	}
@@ -162,8 +187,17 @@ ul li.checked::before {
 		width: 75%;
 	}
 
-	.header .addBtn {
+	.header .add-btn {
 		width: 25%;
+	}
+
+	.sort-btn {
+		font-weight: 500;
+		padding: 0.2rem 0.6rem;
+	}
+
+	.sort-btn:last-child {
+		margin-left: 3rem;
 	}
 
 	ul li {
@@ -196,8 +230,19 @@ ul li.checked::before {
 	}
 
 	.header input,
-	.header .addBtn {
+	.header .add-btn {
 		font-size: 1.3rem;
+	}
+
+	.sort-btn {
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+		padding: 0.3rem 0.7rem;
+	}
+
+	.sort-btn:last-child {
+		margin-left: 5rem;
 	}
 
 	ul li {

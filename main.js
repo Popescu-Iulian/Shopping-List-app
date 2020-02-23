@@ -1,5 +1,6 @@
 const ITEMS_LIST = document.querySelector('.items-list');
 const ITEMS_INPUT = document.querySelector('.items-input');
+const SORTING_BTNS = document.querySelector('.sorting-btns');
 
 const LIST = [];
 
@@ -36,6 +37,8 @@ function addItem(event) {
 
 	ITEMS_INPUT.value = '';
 
+	if (LIST.length >= 2) SORTING_BTNS.classList.remove('hidden');
+
 	draw();
 }
 
@@ -47,10 +50,28 @@ function delItem(event, idx) {
 
 		draw();
 	}
+
+	if (LIST.length < 2) SORTING_BTNS.classList.add('hidden');
 }
 
 function checkedItem(idx) {
 	LIST[idx].checked = true;
+
+	draw();
+}
+
+function sortAsc() {
+	LIST.sort(function (a, b) {
+		return a.item.toLowerCase() < b.item.toLowerCase() ? -1 : 1;
+	})
+
+	draw();
+}
+
+function sortDesc() {
+	LIST.sort(function (a, b) {
+		return a.item.toLowerCase() > b.item.toLowerCase() ? -1 : 1;
+	})
 
 	draw();
 }
