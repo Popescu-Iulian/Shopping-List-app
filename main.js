@@ -42,6 +42,12 @@ function addItem(event) {
 	draw();
 }
 
+function addItemByEnter(event) {
+	if (event.key === 'Enter') {
+		addItem(event);
+	}
+}
+
 function delItem(event, idx) {
 	event.stopPropagation();
 

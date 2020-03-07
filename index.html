@@ -20,8 +20,11 @@
 					type="text"
 					class="items-input"
 					placeholder="What do you want to buy ..."
+					onkeypress="addItemByEnter(event)"
 				/>
-				<button onclick="addItem(event)" class="add-btn">Add</button>
+				<button onclick="addItem(event)" class="add-btn">
+					Add
+				</button>
 			</div>
 
 			<div class="sorting-btns hidden">
